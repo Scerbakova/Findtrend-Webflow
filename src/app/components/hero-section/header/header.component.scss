@@ -1,0 +1,100 @@
+.header {
+  padding: 0px 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.navigation {
+  margin-top: 40px;
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 40px;
+  margin-top: 40px;
+}
+
+.button {
+  border: none;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+
+.button__login {
+  color: white;
+  background-color: transparent;
+}
+
+.button__login:hover {
+  color: black;
+  background-color: white;
+}
+
+.button__register {
+  padding: 12px 32px;
+}
+
+.button__register:hover {
+  color: white;
+  background-color: black;
+}
+
+.logo__text {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.header__small-screen {
+  width: 100%;
+  padding: 24px 18px;
+}
+
+.logo__image, .modal__logo img {
+  width: 40px;
+}
+
+.burger__icon, .close__modal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.burger__icon, .close__modal {
+  max-width: 24px;
+}
+
+.modal__background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 638px;
+  z-index: 2;
+  overflow: auto;
+}
+
+.modal__body {
+  padding: 24px 18px;
+  background-color: black;
+}
+
+// body.modal__wrapper-open {
+//   overflow: hidden;
+// }

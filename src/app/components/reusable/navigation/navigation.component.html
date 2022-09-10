@@ -1,0 +1,8 @@
+<ul [ngClass]="ulClass">
+  <app-link
+    *ngFor="let linkAndLabel of linksAndLabels"
+    [link]="linkAndLabel.link"
+    [label]="linkAndLabel.label"
+  ></app-link>
+  <ng-content></ng-content>
+</ul>

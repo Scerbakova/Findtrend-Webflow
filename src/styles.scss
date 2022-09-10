@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Effra";
+  src: local("Effra"), url(./assets/fonts/Effra_Trial_Rg.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Effra";
+  src: local("Effra"), url(./assets/fonts/Effra_Trial_Md.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Effra";
+  src: local("Effra"), url(./assets/fonts/Effra_Trial_Bd.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Effra";
+  src: local("Effra"),
+    url(./assets/fonts/Effra_Trial_XBd.ttf) format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto&display=swap");
+// font-family: 'Inter', sans-serif;
+// font-family: 'Roboto', sans-serif;
+@import url("https://db.onlinewebfonts.com/c/ca32b369590c4b105ed8cbdf1f8da722?family=GoodDogNewW00-Regular");
+// font-family: 'GoodDogNewW00-Regular', sans-serif;
+
+@import "~bootstrap/scss/bootstrap";
+@import "../src/assets/reset.scss";
+
+body {
+  font-family: "effra", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  max-width: 100vw;
+}

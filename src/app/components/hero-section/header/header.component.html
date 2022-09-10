@@ -1,0 +1,59 @@
+<header class="header" *ngIf="wideScreen; else smallScreen">
+  <div class="row align-items-center">
+    <div
+      class="col-xxl-4 order-xxl-1 col-xl-3 order-xl-1 col-md-6 order-md-1 logo"
+    >
+      <img src="../../../assets/images/logo.svg" alt="logo" />
+      <span class="logo__text">Findtrend</span>
+    </div>
+
+    <app-navigation
+      [burger]="burger"
+      class="col-xxl-6 order-xxl-2 col-xl-6 order-xl-2 col-md-12 order-md-3 navigation"
+      [linksAndLabels]="linksAndLabels"
+    ></app-navigation>
+
+    <div class="col-xxl-2 col-xl-3 col-md-6 order-md-2 header__buttons">
+      <button class="button button__login">Login</button>
+      <button class="button button__register">Register</button>
+    </div>
+  </div>
+</header>
+<ng-template #smallScreen>
+  <header class="header__small-screen">
+    <div class="row justify-content-between">
+      <div class="col-2">
+        <img src="../../../assets/images/logo.svg" alt="logo" />
+      </div>
+      <div class="col-2 burger__icon">
+        <img
+          (click)="onShowMenu()"
+          *ngIf="!showMenu; else showClose"
+          src="../../../assets/images/burger.svg"
+          alt="menu"
+        />
+      </div>
+    </div>
+    <ng-template #showClose>
+      <div class="modal__wrapper">
+        <div class="modal__body">
+          <div>
+            <div class="row justify-content-between">
+              <div class="col-2">
+                <img class="modal__logo" src="../../../assets/images/logo.svg" alt="logo" />
+              </div>
+              <div (click)="onShowMenu()" class="col-2 close__modal">
+                &#10006;
+              </div>
+            </div>
+            <app-navigation [linksAndLabels]="linksAndLabels" [burger]="burger">
+              <button class="button button__login">Login</button>
+              <button class="button button__register">Register</button>
+            </app-navigation>
+          </div>
+        </div>
+      </div>
+      <div (click)="onShowMenu()" class="modal__background"></div>
+    </ng-template>
+  </header>
+</ng-template>
