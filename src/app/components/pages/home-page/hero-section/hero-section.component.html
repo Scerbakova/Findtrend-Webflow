@@ -1,0 +1,76 @@
+<div class="hero__wrapper">
+  <app-header></app-header>
+  <section class="hero__container" [ngSwitch]="screen">
+    <div class="row justify-content-center">
+      <div class="col-12 hero__content">
+        <app-title
+          *ngSwitchDefault
+          label="Minimize your tabs."
+          size="extra-large"
+          color="white"
+        ></app-title>
+        <app-title
+          *ngSwitchCase="'smallScreen'"
+          size="small"
+          color="white"
+          label="Minimize your tabs."
+        ></app-title>
+        <app-title
+          *ngSwitchDefault
+          label="Find the trends!"
+          size="extra-large"
+          color="white"
+        ></app-title>
+        <app-title
+          *ngSwitchCase="'smallScreen'"
+          size="small"
+          color="white"
+          label="Find the trends!"
+        ></app-title>
+
+        <div class="hero__text">
+          <p>
+            Don’t let your computer memories consumes all of those browser tabs.
+          </p>
+          <p>
+            Findtrend let you gathers all of your favorite website into one
+            place.
+          </p>
+        </div>
+
+        <div class="hero__button--container">
+          <button class="button__start">Get Started🔥</button>
+          <img
+            class="button__image"
+            src="../../../assets/images/img-hero.png"
+            alt="all research start from here"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 tabs__container">
+        <img
+          class="tab tab__cryptopunk"
+          src="../../../assets/images/Cryptopunk.svg"
+          alt="Cryptopunk tab"
+        />
+        <img
+          class="tab tab__popular-design"
+          src="../../../assets/images/Popular-Design.svg"
+          alt="Popular design tab"
+        />
+        <img
+          class="tab tab__product-design"
+          src="../../../assets/images/Product-Design.svg"
+          alt="Product design tab"
+        />
+        <img
+          class="tab tab__elon-musk"
+          src="../../../assets/images/Elon-Musk.svg"
+          alt="Elon Musk tab"
+        />
+      </div>
+    </div>
+  </section>
+</div>

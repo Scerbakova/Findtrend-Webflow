@@ -1,15 +1,15 @@
 <header class="header" *ngIf="wideScreen; else smallScreen">
   <div class="row align-items-center">
     <div
-      class="col-xxl-4 order-xxl-1 col-xl-3 order-xl-1 col-md-6 order-md-1 logo"
+      class="col-xxl-2 order-xxl-1 col-xl-3 order-xl-1 col-md-6 order-md-1 logo"
     >
       <img src="../../../assets/images/logo.svg" alt="logo" />
       <span class="logo__text">Findtrend</span>
     </div>
 
     <app-navigation
+      class="col-xxl-8 order-xxl-2 col-xl-6 order-xl-2 col-md-12 order-md-3 navigation"
       [burger]="burger"
-      class="col-xxl-6 order-xxl-2 col-xl-6 order-xl-2 col-md-12 order-md-3 navigation"
       [linksAndLabels]="linksAndLabels"
     ></app-navigation>
 
@@ -38,9 +38,13 @@
       <div class="modal__wrapper">
         <div class="modal__body">
           <div>
-            <div class="row justify-content-between">
+            <div class="row justify-content-between modal__header">
               <div class="col-2">
-                <img class="modal__logo" src="../../../assets/images/logo.svg" alt="logo" />
+                <img
+                  class="modal__logo"
+                  src="../../../assets/images/logo.svg"
+                  alt="logo"
+                />
               </div>
               <div (click)="onShowMenu()" class="col-2 close__modal">
                 &#10006;

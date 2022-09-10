@@ -32,5 +32,6 @@ export class HeaderComponent {
 
   onShowMenu() {
     this.showMenu = !this.showMenu;
+    console.log(this.showMenu)
   }
 }

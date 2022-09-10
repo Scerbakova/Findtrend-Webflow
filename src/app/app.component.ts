@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Findtrend-Webflow';
+  screen!: "wideScreen" | "smallScreen";
+  innerWidth: number | undefined;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.innerWidth = window.innerWidth;
+
+    if (this.innerWidth >= 720) {
+      this.screen = 'wideScreen';
+    } else {
+      this.screen = 'smallScreen';
+    }
+    return this.innerWidth
+  }
 }
