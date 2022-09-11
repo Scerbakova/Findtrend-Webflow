@@ -1,0 +1,45 @@
+.pointer__wrapper {
+  max-width: fit-content;
+  position: relative;
+}
+
+.pointer__text {
+  font-family: "GoodDogNewW00-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  width: 93px;
+  height: 28px;
+  transform: rotate(6deg);
+}
+
+.pointer__text--small {
+  font-size: 12px;
+  transform: rotate(0deg);
+}
+
+.pointer--rotated {
+  transform: rotate(6deg);
+}
+
+.pointer--white {
+  color: white;
+}
+
+.pointer--black {
+  color: black;
+}
+
+.pointer__image {
+  position: absolute;
+  left: 0;
+}
+
+.arrow--false {
+  top: 40px;
+}
+
+.arrow--true {
+  left: 50px;
+  bottom: 30px;
+}

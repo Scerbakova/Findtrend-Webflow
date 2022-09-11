@@ -1,0 +1,37 @@
+<section class="best-deal__wrapper" [ngSwitch]="screen">
+  <div class="title__wrapper" *ngSwitchDefault>
+    <app-title
+      color="white"
+      size="medium"
+      label="Get your best deal"
+    ></app-title>
+  </div>
+  <div class="title__wrapper" *ngSwitchCase="'smallScreen'">
+    <app-title
+      color="white"
+      size="small"
+      label="Get your best deal"
+    ></app-title>
+  </div>
+  <div class="content__wrapper">
+    <div class="plan-picker__wrapper">
+      <span class="plan">Monthly</span>
+      <button (click)="changePlan()" class="switcher">
+        <div
+          class="green__circle"
+          [ngClass]="
+            this.plan === 'Yearly'
+              ? 'green__circle--right'
+              : 'green__circle--left'
+          "
+        ></div>
+      </button>
+      <span class="plan">Yearly</span>
+      <app-pointer
+        class="pointer"
+        image="../../../../../assets/images/Arrow-white.svg"
+        label="Save 10% per month"
+      ></app-pointer>
+    </div>
+  </div>
+</section>

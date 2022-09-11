@@ -2,30 +2,20 @@
   <app-header></app-header>
   <section class="hero__container" [ngSwitch]="screen">
     <div class="row justify-content-center">
-      <div class="col-12 hero__content">
-        <app-title
-          *ngSwitchDefault
-          label="Minimize your tabs."
-          size="extra-large"
-          color="white"
-        ></app-title>
-        <app-title
-          *ngSwitchCase="'smallScreen'"
-          size="small"
-          color="white"
-          label="Minimize your tabs."
-        ></app-title>
-        <app-title
-          *ngSwitchDefault
-          label="Find the trends!"
-          size="extra-large"
-          color="white"
-        ></app-title>
+      <div class="hero__content">
+        <div class="col-5 title__wrapper">
+          <app-title
+            *ngSwitchDefault
+            label="Minimize your tabs. Find the trends!"
+            size="extra-large"
+            color="white"
+          ></app-title>
+        </div>
         <app-title
           *ngSwitchCase="'smallScreen'"
           size="small"
           color="white"
-          label="Find the trends!"
+          label="Minimize your tabs. Find the trends!"
         ></app-title>
 
         <div class="hero__text">
@@ -40,11 +30,11 @@
 
         <div class="hero__button--container">
           <button class="button__start">Get Started🔥</button>
-          <img
-            class="button__image"
-            src="../../../assets/images/img-hero.png"
-            alt="all research start from here"
-          />
+          <app-pointer
+            class="pointer"
+            image="../../../../../assets/images/Arrow-white.svg"
+            label="All research start from here"
+          ></app-pointer>
         </div>
       </div>
     </div>

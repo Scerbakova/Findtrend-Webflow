@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title',
-  template: `<h2 [ngClass]="titleClasses">{{ label }}</h2>`,
+  template: `<span [ngClass]="titleClasses">{{ label }}</span>`,
   styles: [
     `
       .title {

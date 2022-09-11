@@ -1,0 +1,37 @@
+<section class="row platform__wrapper" [ngSwitch]="screen">
+  <div class="col-12 title__wrapper" *ngSwitchDefault>
+    <app-title
+      color="black"
+      size="medium"
+      label="All platform connect to Findtrend"
+    ></app-title>
+  </div>
+  <div class="col-12 title__wrapper" *ngSwitchCase="'smallScreen'">
+    <app-title
+      color="black"
+      size="small"
+      label="All platform connect to Findtrend"
+    ></app-title>
+  </div>
+  <div class="content__wrapper">
+    <div class="logos__wrapper">
+      <div class="platforms__logos">
+        <button
+          (click)="setActive(i)"
+          *ngFor="let logo of logos; let i = index"
+          [ngClass]="
+            activeButton === logo.alt ? 'logo__wrapper--active' : 'logo__wrapper'
+          "
+        >
+          <img src="{{ logo.image }}" alt="{{ logo.alt }}" />
+        </button>
+      </div>
+    </div>
+    <div class="twitter">
+      <img src="../../../../../assets/images/short-post.svg" alt="short post" />
+      <img src="../../../../../assets/images/long-post.svg" alt="long post" />
+      <img src="../../../../../assets/images/short-post.svg" alt="short post" />
+    </div>
+    <button class="view-more__button">View More Trend</button>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+.best-deal__wrapper {
+  background-color: black;
+  text-align: center;
+}
+
+.title__wrapper {
+  padding: 140px 0px 39px 0px;
+}
+
+.plan-picker__wrapper {
+  position: relative;
+}
+
+.plan {
+  color: white;
+}
+
+.switcher {
+  width: 104px;
+  height: 52px;
+  background: #ffffff;
+  border-radius: 99px;
+  margin-bottom: 40px;
+  border: none;
+  position: relative;
+}
+
+.green__circle {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 36px;
+  height: 36px;
+  background: #a8ff35;
+  border-radius: 50%;
+}
+
+.green__circle--left {
+  left: 10%;
+}
+
+.green__circle--right {
+  right: 10%;
+}
+
+.pointer {
+  position: absolute;
+  top: 0;
+}

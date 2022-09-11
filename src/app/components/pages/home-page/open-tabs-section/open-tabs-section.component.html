@@ -13,11 +13,13 @@
       size="extra-small"
     ></app-title>
     <div *ngSwitchDefault class="row align-items-center">
-      <img
-        class="col-2"
-        src="../../../../../assets/images/solution.png"
-        alt="solution for discover a trend"
-      />
+      <app-pointer
+        class="col-2 pointer--left"
+        image="../../../../../assets/images/Arrow-black.svg"
+        color="black"
+        label="solution for discover a trend"
+        [arrowFirst]="true"
+      ></app-pointer>
       <div class="col-8 tab__background">
         <div class="row align-items-center justify-content-center tab__wrapper">
           <img
@@ -27,11 +29,12 @@
           />
         </div>
       </div>
-      <img
-        class="col-2"
-        src="../../../../../assets/images/one-tab.png"
-        alt="you just need one tab now"
-      />
+      <app-pointer
+        class="col-2 pointer--right"
+        image="../../../../../assets/images/Arrow-black-left.svg"
+        color="black"
+        label="you just need one tab now"
+      ></app-pointer>
       <div class="open-tab__text">
         <p>
           A solution for your browser tabs and don’t make your device get slower
@@ -41,21 +44,27 @@
     </div>
     <div *ngSwitchCase="'smallScreen'">
       <div class="tab__background">
+        <app-pointer
+          class="col-2 pointer-left--small"
+          [small]="'small'"
+          image="../../../../../assets/images/Arrow-up.svg"
+          color="black"
+          label="solution for discover a trend"
+          [arrowFirst]="true"
+        ></app-pointer>
         <img
-          class="one-tab__image--small"
-          src="../../../../../assets/images/one-tab-small.png"
-          alt="solution for discover a trend"
+          class="tab--small"
+          src="../../../../../assets/images/Findtrend.svg"
+          alt="Findtrend tab"
         />
-          <img
-            class="tab--small"
-            src="../../../../../assets/images/Findtrend.svg"
-            alt="Findtrend tab"
-          />
-        <img
-          class="solution__image--small"
-          src="../../../../../assets/images/solution-small.png"
-          alt="you just need one tab now"
-        />
+        <app-pointer
+          class="col-2 pointer-right--small"
+          [small]="'small'"
+          [rotate]="'rotated'"
+          image="../../../../../assets/images/Arrow-down.svg"
+          color="black"
+          label="you just need one tab now"
+        ></app-pointer>
       </div>
       <div class="open-tab__text">
         <p>

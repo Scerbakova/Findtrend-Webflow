@@ -22,6 +22,14 @@
   min-height: 202px;
 }
 
+.pointer--right {
+ margin-bottom: 70px;
+}
+
+.pointer--left {
+  margin-top: 70px;
+}
+
 .open-tab__text {
   margin: 24px auto 0px auto;
   max-width: 666px;
@@ -44,15 +52,15 @@
     position: relative;
     margin: 80px auto;
   }
-  .one-tab__image--small,
-  .solution__image--small {
+  .pointer-left--small,
+  .pointer-right--small {
     position: absolute;
   }
-  .one-tab__image--small {
+  .pointer-right--small {
     top: -50px;
-    right: 0;
+    right: 50px;
   }
-  .solution__image--small {
+  .pointer-left--small {
     bottom: -50px;
     left: 0;
   }

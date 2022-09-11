@@ -1,0 +1,119 @@
+.platform__wrapper {
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.title__wrapper {
+  padding: 140px 0px 80px;
+}
+
+.logos__wrapper {
+  height: 124px;
+  position: relative;
+  margin-bottom: 77px;
+}
+
+.platforms__logos {
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+}
+
+.logo__wrapper,
+.logo__wrapper--active {
+  padding: 32px;
+  border: none;
+}
+
+.logo__wrapper--active {
+  background-color: #a8ff35;
+}
+
+.twitter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  margin-bottom: 80px;
+}
+
+.twitter img {
+  max-width: 800px;
+}
+
+.view-more__button {
+  color: white;
+  font-family: "Effra", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  background-color: black;
+  padding: 16px 32px;
+  border-radius: 40px;
+  margin-bottom: 140px;
+  transition: .3s;
+}
+
+.view-more__button:hover {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .platforms__logos {
+    position: absolute;
+    justify-content: flex-start;
+    padding: 0px 18px;
+    animation-name: carousel;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .twitter img {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .title__wrapper {
+    padding: 80px 0px 32px;
+  }
+  .logos__wrapper {
+    height: 64px;
+    margin-bottom: 32px;
+  }
+  .logo__wrapper,
+  .logo__wrapper--active {
+    padding: 16px;
+    border: none;
+  }
+  .logo__wrapper img,
+  .logo__wrapper--active img {
+    max-width: 32px;
+  }
+  .twitter img {
+    max-width: 339px;
+  }
+  .twitter {
+    margin-bottom: 32px;
+  }
+  .view-more__button {
+    font-size: 14px;
+    padding: 12px 24px;
+    margin-bottom: 80px;
+  }
+}
+
+@keyframes carousel {
+  from {
+    right: -500px;
+  }
+  50% {
+    right: 50px;
+  }
+  to {
+    right: -500px;
+  }
+}

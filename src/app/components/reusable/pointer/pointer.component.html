@@ -1,0 +1,10 @@
+<div [ngSwitch]="arrowFirst" class="pointer__wrapper">
+  <div *ngSwitchCase="true">
+    <img [ngClass]="arrowClasses" [src]="image" alt="arrow" />
+    <p [ngClass]="pointerTextClasses" class="pointer__text">{{ label }}</p>
+  </div>
+  <div *ngSwitchDefault>
+    <p [ngClass]="pointerTextClasses" class="pointer__text">{{ label }}</p>
+    <img [ngClass]="arrowClasses" [src]="image" alt="arrow" />
+  </div>
+</div>

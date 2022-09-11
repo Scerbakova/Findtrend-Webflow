@@ -1,0 +1,58 @@
+<section class="row justify-content-center" [ngSwitch]="screen">
+  <div class="col-12 title__wrapper" *ngSwitchDefault>
+    <app-title
+      color="black"
+      size="medium"
+      label="Findtrend helps you to increase your productivity and reduce your computer's memory load, "
+    ></app-title>
+    <app-title
+      color="grey"
+      size="medium"
+      label="an application that can fulfill your daily browsing needs."
+    ></app-title>
+  </div>
+  <div class="col-12 title__wrapper" *ngSwitchCase="'smallScreen'">
+    <app-title
+      color="black"
+      size="small"
+      label="Findtrend helps you to increase your productivity and reduce your computer's memory load, "
+    ></app-title>
+    <app-title
+      color="grey"
+      size="small"
+      label="an application that can fulfill your daily browsing needs."
+    ></app-title>
+  </div>
+  <div class="content__wrapper" *ngSwitchDefault>
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <app-title
+          color="black"
+          size="medium"
+          label="Findtrend make +1000 Startup grow"
+        ></app-title>
+      </div>
+    </div>
+    <div class="benefit__logos">
+      <div *ngFor="let logo of logos" class="logo__wrapper">
+        <img src="{{ logo.image }}" alt="{{ logo.alt }}" />
+      </div>
+    </div>
+  </div>
+  <div class="content__wrapper" *ngSwitchCase="'smallScreen'">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <app-title
+          color="black"
+          size="small"
+          label="Findtrend make +1000 Startup grow"
+        ></app-title>
+      </div>
+    </div>
+    <div class="benefit__logos">
+      <div *ngFor="let logo of logos" class="logo__wrapper">
+        <img src="{{ logo.image }}" alt="{{ logo.alt }}" />
+      </div>
+    </div>
+  </div>
+</section>

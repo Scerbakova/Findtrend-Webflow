@@ -10,6 +10,10 @@ import { LinkComponent } from './components/reusable/navigation/link/link.compon
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { TitleComponent } from './components/reusable/title/title.component';
 import { OpenTabsSectionComponent } from './components/pages/home-page/open-tabs-section/open-tabs-section.component';
+import { PointerComponent } from './components/reusable/pointer/pointer.component';
+import { BenefitsSectionComponent } from './components/pages/home-page/benefits-section/benefits-section.component';
+import { PlatformsSectionComponent } from './components/pages/home-page/platforms-section/platforms-section.component';
+import { BestDealSectionComponent } from './components/pages/home-page/best-deal-section/best-deal-section.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { OpenTabsSectionComponent } from './components/pages/home-page/open-tabs
     HomePageComponent,
     TitleComponent,
     OpenTabsSectionComponent,
+    PointerComponent,
+    BenefitsSectionComponent,
+    PlatformsSectionComponent,
+    BestDealSectionComponent,
   ],
   imports: [
     BrowserModule,
