@@ -1,0 +1,30 @@
+<section class="join--section__wrapper">
+  <div class="title__wrapper" [ngSwitch]="screen">
+    <app-title
+      *ngSwitchDefault
+      color="black"
+      label="Join us on email for"
+      size="large"
+    ></app-title>
+    <app-title
+      *ngSwitchDefault
+      color="transparent"
+      label="more trending topics"
+      size="large"
+    ></app-title>
+    <app-title
+      *ngSwitchCase="'smallScreen'"
+      color="black"
+      label="Join us on email for"
+      size="extra-small"
+    ></app-title>
+    <app-title
+      *ngSwitchCase="'smallScreen'"
+      color="transparent"
+      label="more trending topics"
+      size="extra-small"
+    ></app-title>
+  </div>
+  <button class="join__button">Join Now </button>
+  <app-footer></app-footer>
+</section>

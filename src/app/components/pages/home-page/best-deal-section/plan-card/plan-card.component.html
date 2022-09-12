@@ -1,0 +1,20 @@
+<div
+class="plan__card"
+  [ngClass]="
+    plan.title === 'Regular' ? 'plan__card--green' : 'plan__card--white'
+  "
+>
+  <div class="plan__title">{{ plan.title }}</div>
+  <div class="plan__for">{{ plan.recommendedFor }}</div>
+    <hr class="line" />
+  <div><span class="plan__price">{{ plan.price }}</span>{{ plan.subscriptionDuration }}</div>
+  <div class="options__wrapper">
+    <div class="option" *ngFor="let option of plan.optionsIncluded">{{ option }}</div>
+  </div>
+  <button
+    class="trial__button"
+    [ngClass]="plan.title === 'Regular' ? 'button--black' : 'button--green'"
+  >
+    Start Free Trial
+  </button>
+</div>

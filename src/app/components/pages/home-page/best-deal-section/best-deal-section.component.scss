@@ -1,18 +1,31 @@
 .best-deal__wrapper {
   background-color: black;
   text-align: center;
+  padding-bottom: 116px;
 }
 
 .title__wrapper {
-  padding: 140px 0px 39px 0px;
+  padding-top: 140px;
 }
 
 .plan-picker__wrapper {
   position: relative;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  margin: 40px auto;
+  max-width: fit-content;
 }
 
-.plan {
+.plan--white {
   color: white;
+}
+
+.plan--grey {
+  color: #f5f5f57e;
 }
 
 .switcher {
@@ -20,9 +33,13 @@
   height: 52px;
   background: #ffffff;
   border-radius: 99px;
-  margin-bottom: 40px;
   border: none;
   position: relative;
+  margin: 0px 24px;
+  transition: .3s;
+  &:hover {
+    background-color: #f5f5f57e;
+  }
 }
 
 .green__circle {
@@ -45,5 +62,44 @@
 
 .pointer {
   position: absolute;
-  top: 0;
+  top: -10px;
+  left: 340px;
 }
+
+.pointer--small {
+  position: absolute;
+  top: 80px;
+  left: 190px;
+}
+
+.plans-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 719px) {
+  .plan-picker__wrapper {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 80px;
+  }
+  .best-deal__wrapper {
+    background-color: black;
+    text-align: center;
+    padding-bottom: 56px;
+  }
+  .plan--grey {
+    color: #f5f5f57e;
+  }
+  .switcher {
+    height: 44px;
+    margin-bottom: 0px;
+  }
+  .green__circle {
+    width: 28px;
+    height: 28px;
+  }
+}
+

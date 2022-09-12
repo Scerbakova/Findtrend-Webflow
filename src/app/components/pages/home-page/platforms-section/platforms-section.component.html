@@ -1,4 +1,4 @@
-<section class="row platform__wrapper" [ngSwitch]="screen">
+<section class="row justify-content-center platform__wrapper" [ngSwitch]="screen">
   <div class="col-12 title__wrapper" *ngSwitchDefault>
     <app-title
       color="black"
@@ -6,7 +6,7 @@
       label="All platform connect to Findtrend"
     ></app-title>
   </div>
-  <div class="col-12 title__wrapper" *ngSwitchCase="'smallScreen'">
+  <div class="col-11 title__wrapper" *ngSwitchCase="'smallScreen'">
     <app-title
       color="black"
       size="small"
@@ -20,7 +20,9 @@
           (click)="setActive(i)"
           *ngFor="let logo of logos; let i = index"
           [ngClass]="
-            activeButton === logo.alt ? 'logo__wrapper--active' : 'logo__wrapper'
+            activeButton === logo.alt
+              ? 'logo__wrapper--active'
+              : 'logo__wrapper'
           "
         >
           <img src="{{ logo.image }}" alt="{{ logo.alt }}" />

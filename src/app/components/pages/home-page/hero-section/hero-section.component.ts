@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { tabs } from 'src/data/tabs';
 
 @Component({
   selector: 'app-hero-section',
@@ -9,4 +10,6 @@ export class HeroSectionComponent {
 
   @Input()
   screen!: string;
+
+  tabs = tabs
 }

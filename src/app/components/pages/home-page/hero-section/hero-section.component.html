@@ -41,24 +41,11 @@
     <div class="row">
       <div class="col-12 tabs__container">
         <img
-          class="tab tab__cryptopunk"
-          src="../../../assets/images/Cryptopunk.svg"
-          alt="Cryptopunk tab"
-        />
-        <img
-          class="tab tab__popular-design"
-          src="../../../assets/images/Popular-Design.svg"
-          alt="Popular design tab"
-        />
-        <img
-          class="tab tab__product-design"
-          src="../../../assets/images/Product-Design.svg"
-          alt="Product design tab"
-        />
-        <img
-          class="tab tab__elon-musk"
-          src="../../../assets/images/Elon-Musk.svg"
-          alt="Elon Musk tab"
+        
+          *ngFor="let tab of tabs"
+          [class]="tab.class"
+          [src]="tab.source"
+          [alt]="tab.alternative"
         />
       </div>
     </div>

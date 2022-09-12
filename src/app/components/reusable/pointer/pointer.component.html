@@ -1,4 +1,4 @@
-<div [ngSwitch]="arrowFirst" class="pointer__wrapper">
+<div [ngSwitch]="position === 'arrow-first'" class="pointer__wrapper">
   <div *ngSwitchCase="true">
     <img [ngClass]="arrowClasses" [src]="image" alt="arrow" />
     <p [ngClass]="pointerTextClasses" class="pointer__text">{{ label }}</p>

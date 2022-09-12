@@ -16,7 +16,7 @@ import { Component, Input } from '@angular/core';
       }
       .title--large {
         font-weight: 700;
-        font-size: 72px;;
+        font-size: 72px;
       }
       .title--medium {
         font-weight: 700;
@@ -37,11 +37,11 @@ import { Component, Input } from '@angular/core';
         color: black;
       }
       .title--grey {
-        color: #ADADAD;
+        color: #adadad;
       }
       .title--transparent {
-        color: #87D322;
-        opacity: 0.7;
+        color: #87d322;
+        opacity: 0.9;
       }
     `,
   ],
@@ -51,32 +51,50 @@ export class TitleComponent {
   label = 'Title';
 
   @Input()
-  size: 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small' = 'extra-large';
+  size: 'extra-large' | 'large' | 'medium' | 'small' | 'extra-small' =
+    'extra-large';
 
   @Input()
   color: 'white' | 'black' | 'grey' | 'transparent' = 'white';
 
+  titleColour() {
+    switch (this.color) {
+      case 'black':
+        'title--black';
+        break;
+      case 'grey':
+        'title--grey';
+        break;
+      case 'transparent':
+        'title--transparent';
+        break;
+      default:
+        'title--white';
+    }
+  }
+
+  titleSize() {
+    switch (this.size) {
+      case 'large':
+        'title--large';
+        break;
+      case 'medium':
+        'title--medium';
+        break;
+      case 'small':
+        'title--small';
+        break;
+      case 'extra-small':
+        'title--extra-small';
+        break;
+      default:
+        'title--extra-large';
+    }
+  }
+
   public get titleClasses(): string[] {
-    if (this.color === 'white') {
-      ('title--white');
-    } else if (this.color === 'black') {
-      ('title--black');
-    } else if (this.color === 'grey') {
-      ('title--grey');
-    } else {
-      ('title--transparent');
-    }
-    if (this.size === 'extra-large') {
-      ('title--extra-large');
-    } else if (this.size === 'large') {
-      ('title--large');
-    } else if (this.size === 'medium') {
-      ('title--medium');
-    } else if (this.size === 'small') {
-      ('title--small');
-    } else {
-      ('title--extra-small');
-    }
+    this.titleColour();
+    this.titleSize();
     return ['title', `title--${this.size}`, `title--${this.color}`];
   }
 }

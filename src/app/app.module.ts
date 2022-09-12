@@ -14,6 +14,9 @@ import { PointerComponent } from './components/reusable/pointer/pointer.componen
 import { BenefitsSectionComponent } from './components/pages/home-page/benefits-section/benefits-section.component';
 import { PlatformsSectionComponent } from './components/pages/home-page/platforms-section/platforms-section.component';
 import { BestDealSectionComponent } from './components/pages/home-page/best-deal-section/best-deal-section.component';
+import { PlanCardComponent } from './components/pages/home-page/best-deal-section/plan-card/plan-card.component';
+import { JoinSectionComponent } from './components/pages/home-page/join-section/join-section.component';
+import { FooterComponent } from './components/pages/home-page/join-section/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { BestDealSectionComponent } from './components/pages/home-page/best-deal
     BenefitsSectionComponent,
     PlatformsSectionComponent,
     BestDealSectionComponent,
+    PlanCardComponent,
+    JoinSectionComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

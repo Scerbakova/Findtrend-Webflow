@@ -18,7 +18,7 @@
         image="../../../../../assets/images/Arrow-black.svg"
         color="black"
         label="solution for discover a trend"
-        [arrowFirst]="true"
+        [position]="'arrow-first'"
       ></app-pointer>
       <div class="col-8 tab__background">
         <div class="row align-items-center justify-content-center tab__wrapper">
@@ -46,11 +46,11 @@
       <div class="tab__background">
         <app-pointer
           class="col-2 pointer-left--small"
-          [small]="'small'"
+          [size]="'small'"
           image="../../../../../assets/images/Arrow-up.svg"
           color="black"
           label="solution for discover a trend"
-          [arrowFirst]="true"
+          [position]="'arrow-first'"
         ></app-pointer>
         <img
           class="tab--small"
@@ -59,7 +59,7 @@
         />
         <app-pointer
           class="col-2 pointer-right--small"
-          [small]="'small'"
+          [size]="'small'"
           [rotate]="'rotated'"
           image="../../../../../assets/images/Arrow-down.svg"
           color="black"

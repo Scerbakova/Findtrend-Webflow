@@ -17,6 +17,10 @@
   display: flex;
   justify-content: center;
   column-gap: 24px;
+  transition: 0.3s;
+  & button:hover {
+    transform: scale(1.1);
+  }
 }
 
 .logo__wrapper,
@@ -43,6 +47,7 @@
 
 .view-more__button {
   color: white;
+  border: none;
   font-family: "Effra", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -51,7 +56,7 @@
   padding: 16px 32px;
   border-radius: 40px;
   margin-bottom: 140px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .view-more__button:hover {

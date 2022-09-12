@@ -13,19 +13,19 @@ export class PointerComponent {
   image!: string;
 
   @Input()
-  arrowFirst = false;
+  position: 'arrow-first' | 'arrow-first-white' | '' = '';
 
   @Input()
-  small: 'small' | 'large' = 'large';
+  size: 'small' | 'large' = 'large';
 
   @Input()
   color: 'white' | 'black' = 'white';
 
   @Input()
-  rotate: 'rotated' | 'not-rotated' = 'not-rotated';
+  rotate: 'rotated' | '' = '';
 
   public get arrowClasses(): string[] {
-    return ['pointer__image', `arrow--${this.arrowFirst}`];
+    return ['pointer__image', `arrow--${this.position}`];
   }
   public get pointerTextClasses(): string[] {
     if (this.color === 'white') {
@@ -33,6 +33,11 @@ export class PointerComponent {
     } else {
       ('pointer--black');
     }
-    return ['pointer__text', `pointer--${this.color}`, `pointer__text--${this.small}`,`pointer--${this.rotate}`];
+    return [
+      'pointer__text',
+      `pointer--${this.color}`,
+      `pointer__text--${this.size}`,
+      `pointer--${this.rotate}`,
+    ];
   }
 }

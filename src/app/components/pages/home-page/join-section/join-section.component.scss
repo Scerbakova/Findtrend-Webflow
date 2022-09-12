@@ -1,0 +1,37 @@
+.join--section__wrapper {
+  background-color: #a8ff35;
+  text-align: center;
+}
+
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 18px 40px 18px;
+}
+
+.join__button {
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 140%;
+  padding: 16px 53px;
+  border-radius: 40px;
+  background-color: black;
+  margin-bottom: 140px;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0px 0px 5px 1px inset white;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .title__wrapper {
+    padding: 80px 18px 32px 18px;
+  }
+  .join__button {
+    font-size: 14px;
+    padding: 12px 24px;
+    margin-bottom: 80px;
+  }
+}
