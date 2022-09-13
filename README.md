@@ -1,27 +1,11 @@
-# FindtrendWebflow
+# Findtrend Webflow design
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+This design was taken from - https://www.figma.com/file/XOhO5dqfwJqisHPo9XxTcc/Findtrend-Webflow-(Free-Code)-(Community)?node-id=0%3A1
 
-## Development server
+This project was styled using not only scss, but also bootstrap, especially in Log in and Register pages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Please, feel free to try it out here &#8595;
 
-## Code scaffolding
+https://inspiring-cheesecake-3fa9d5.netlify.app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://user-images.githubusercontent.com/97510856/189857376-a7d44fcd-9bef-4686-9aaa-43d9653bb760.png)
