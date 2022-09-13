@@ -15,7 +15,7 @@ export class PlatformsSectionComponent {
 
   activeButton = 'twitter';
 
-  setActive(i: number) {
-    this.activeButton = this.logos[i].alt
+  setActive(index: number) {
+    this.activeButton = this.logos[index].alt
   }
 }

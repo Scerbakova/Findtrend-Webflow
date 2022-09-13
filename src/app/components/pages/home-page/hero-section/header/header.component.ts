@@ -36,8 +36,4 @@ export class HeaderComponent {
     this.showMenu = !this.showMenu;
     console.log(this.showMenu)
   }
-
-  login() {
-    this.router.navigate(['/login'])
-  }
 }
