@@ -1,0 +1,35 @@
+<div class="login__page">
+  <img class="logo" src="../../../../assets/images/logo.svg">
+  <button [routerLink]="['/home']" class="btn btn-outline-light home">
+    Back to home
+  </button>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 wrapper">
+        <div class="row">
+          <div class="col-12 title">
+            <app-title color="white" label="Log in" size="medium"></app-title>
+          </div>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <app-input
+            [parentForm]="loginForm"
+            formControlName="email"
+            [submitted]="submitted"
+            [placeholder]="'email'"
+          ></app-input>
+          <app-input
+            [parentForm]="loginForm"
+            formControlName="password"
+            [submitted]="submitted"
+            [placeholder]="'password'"
+          ></app-input>
+
+          <div class="form-group">
+            <button class="btn btn-dark border border-white">Log in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

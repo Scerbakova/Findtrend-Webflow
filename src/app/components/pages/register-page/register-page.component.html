@@ -1,0 +1,52 @@
+<div class="register__page">
+  <button [routerLink]="['/home']" class="btn btn-outline-dark home">
+    Back to home
+  </button>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 wrapper">
+        <div class="row">
+          <div class="col-12 title">
+            <app-title color="black" label="Register" size="medium"></app-title>
+          </div>
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <app-input
+            [parentForm]="registerForm"
+            formControlName="firstName"
+            label="First name"
+            [submitted]="submitted"
+            [pattern]="'[a-zA-Z ]*'"
+            [placeholder]="'John'"
+          ></app-input>
+          <app-input
+            [parentForm]="registerForm"
+            formControlName="lastName"
+            label="Last name"
+            [submitted]="submitted"
+            [pattern]="'[a-zA-Z ]*'"
+            [placeholder]="'Doe'"
+          ></app-input>
+          <app-input
+            [parentForm]="registerForm"
+            formControlName="email"
+            label="Email"
+            [submitted]="submitted"
+            [placeholder]="'JohnDoe@email.com'"
+          ></app-input>
+          <app-input
+            [parentForm]="registerForm"
+            formControlName="password"
+            label="Password"
+            [submitted]="submitted"
+            [placeholder]="'six characters long'"
+          ></app-input>
+
+          <div class="form-group">
+            <button class="btn btn-dark">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

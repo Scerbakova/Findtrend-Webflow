@@ -14,8 +14,12 @@
     ></app-navigation>
 
     <div class="col-xxl-2 col-xl-3 col-md-6 order-md-2 header__buttons">
-      <button class="button button__login">Login</button>
-      <button class="button button__register">Register</button>
+      <button [routerLink]="['/login']" class="button button__login">
+        Login
+      </button>
+      <button [routerLink]="['/register']" class="button button__register">
+        Register
+      </button>
     </div>
   </div>
 </header>
@@ -51,8 +55,15 @@
               </div>
             </div>
             <app-navigation [linksAndLabels]="linksAndLabels" [burger]="burger">
-              <button class="button button__login">Login</button>
-              <button class="button button__register">Register</button>
+              <button [routerLink]="['/login']" class="button button__login">
+                Login
+              </button>
+              <button
+                [routerLink]="['/register']"
+                class="button button__register"
+              >
+                Register
+              </button>
             </app-navigation>
           </div>
         </div>

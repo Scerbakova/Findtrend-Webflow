@@ -1,0 +1,20 @@
+<div class="form-group" [formGroup]="parentForm">
+  <label class="text-dark">{{ label }}</label>
+  <input
+    [formControlName]="formControlName"
+    [pattern]="pattern"
+    type="text"
+    class="form-control"
+    [placeholder]="placeholder"
+    [ngClass]="{
+      'is-invalid': submitted && parentForm.controls[formControlName].errors,
+      'is-valid': !parentForm.controls[formControlName].errors
+    }"
+  />
+  <div
+    *ngIf="submitted && parentForm.controls[formControlName].errors"
+    class="invalid-feedback"
+  >
+    <div>{{ label }} is not valid</div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { header } from 'src/data/navigation';
 
 @Component({
@@ -7,6 +8,7 @@ import { header } from 'src/data/navigation';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  constructor( private router: Router ) {}
   burger = false;
 
   wideScreen = true;
@@ -33,5 +35,9 @@ export class HeaderComponent {
   onShowMenu() {
     this.showMenu = !this.showMenu;
     console.log(this.showMenu)
+  }
+
+  login() {
+    this.router.navigate(['/login'])
   }
 }

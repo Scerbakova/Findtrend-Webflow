@@ -28,10 +28,9 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto&display=swap");
-// font-family: 'Inter', sans-serif;
-// font-family: 'Roboto', sans-serif;
+
 @import url("https://db.onlinewebfonts.com/c/ca32b369590c4b105ed8cbdf1f8da722?family=GoodDogNewW00-Regular");
-// font-family: 'GoodDogNewW00-Regular', sans-serif;
+
 
 @import "~bootstrap/scss/bootstrap";
 @import "../src/assets/reset.scss";
@@ -44,4 +43,14 @@ body {
   color: #000000;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+.home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.form-group {
+  margin-top: 40px;
 }

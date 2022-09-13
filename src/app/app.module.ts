@@ -17,6 +17,11 @@ import { BestDealSectionComponent } from './components/pages/home-page/best-deal
 import { PlanCardComponent } from './components/pages/home-page/best-deal-section/plan-card/plan-card.component';
 import { JoinSectionComponent } from './components/pages/home-page/join-section/join-section.component';
 import { FooterComponent } from './components/pages/home-page/join-section/footer/footer.component';
+import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { InputComponent } from './components/reusable/input/input.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +40,16 @@ import { FooterComponent } from './components/pages/home-page/join-section/foote
     PlanCardComponent,
     JoinSectionComponent,
     FooterComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

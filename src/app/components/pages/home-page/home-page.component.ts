@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
@@ -6,7 +6,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
+  screen!: 'wideScreen' | 'smallScreen';
+  innerWidth: number | undefined;
 
-  @Input()
-  screen!: string;
+  @HostListener('window:resize')
+  onResize() {
+    this.innerWidth = window.innerWidth;
+
+    if (this.innerWidth >= 720) {
+      this.screen = 'wideScreen';
+    } else {
+      this.screen = 'smallScreen';
+    }
+    return this.innerWidth;
+  }
 }
